@@ -51,19 +51,25 @@ $x(t) \in (0,1]^2$; reaching $x_i \le 0$ ends the life.
 
 The **drive** is the squared distance from a setpoint,
 
-$$D(x) = \sum_i w_i\,|x_i - x_i^{*}|^{2}, \qquad x^{*} = 0.75,$$
+```math
+D(x) = \sum_i w_i\,|x_i - x_i^{\ast}|^{2}, \qquad x^{\ast} = 0.75
+```
 
 so over-consumption is as costly as deficit. The **motivational salience** of an
 outcome $o$ that would change the body by $\Delta_o$ is the drive reduction it
 affords,
 
-$$m(o \mid x) = D(x) - D(x \oplus \Delta_o),$$
+```math
+m(o \mid x) = D(x) - D(x \oplus \Delta_o)
+```
 
 a function of *need*, not of the outcome: the same ingestive act is appetitive
 under deficit and aversive under surfeit. Fitness is nothing but cumulative
 viability,
 
-$$f = \frac{1}{T}\sum_t \mathbb{1}[\text{alive at } t]\left(1 - \frac{D(x(t))}{D_{\max}}\right).$$
+```math
+f = \frac{1}{T}\sum_t \mathbb{1}[\text{alive at } t]\left(1 - \frac{D(x(t))}{D_{\max}}\right)
+```
 
 No reward is defined anywhere, for the agent or for the evolutionary algorithm.
 
@@ -72,7 +78,9 @@ predictive context $c$, the anticipatory drive
 $D_A(x,c) = \mathbb{E}\left[\sum_k \gamma^k D(x_{t+k}) \mid x, c, \pi\right]$
 is minimised at a context-shifted setpoint
 
-$$x^{*}_{A}(c) = \arg\min_x D_A(x,c) = x^{*} + \Delta(c),$$
+```math
+x^{\ast}_{A}(c) = \arg\min_x D_A(x,c) = x^{\ast} + \Delta(c)
+```
 
 so paying a present homeostatic cost to avoid a larger future one is exactly
 "wanting what is needed *before* it is needed".
@@ -107,7 +115,9 @@ making explicit how causal contributions redistribute with need.
 action selection whose *causal organisation* is reconfigured by need, rather
 than merely correlated with it.
 
-$$\mathrm{MMI} = \frac{1}{|U|}\sum_{U \in S \cup H}\Big|\bar{\alpha}_c(U \prec M \mid \text{deficit}) - \bar{\alpha}_c(U \prec M \mid \text{sated})\Big|$$
+```math
+\mathrm{MMI} = \frac{1}{|U|}\sum_{U \in S \cup H}\Big|\bar{\alpha}_c(U \prec M \mid \text{deficit}) - \bar{\alpha}_c(U \prec M \mid \text{sated})\Big|
+```
 
 Here $\alpha_c(U \prec M)$ is the causal contribution of unit $U$ to the motor
 state, obtained from the actual-causation framework and distributed over units
